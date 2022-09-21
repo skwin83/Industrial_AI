@@ -1,0 +1,6 @@
+# saving image using lossy and  lossless compression
+import argparse
+import cv2
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--path', default = '파일폴더', help = 'Image path.')
