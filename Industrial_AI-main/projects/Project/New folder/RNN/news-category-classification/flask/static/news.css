@@ -1,0 +1,190 @@
+@font-face {
+	font-family: 'EliceDigitalBaeum_Bold';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* get_news css */
+.get-news-container {
+	font-family: 'EliceDigitalBaeum_Bold';
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 10vh;
+	width: 100%;
+	padding-bottom: 10vh;
+}
+
+.get-news-container .form-box{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+/* input-text: 타이틀 작성 */
+.get-news-container .form-box .title-box{
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-bottom: 5vh;
+}
+.get-news-container .form-box .title-box .input-text {
+	width: 50%;
+	height: 25px;
+	border-radius: 3px;
+	transition-duration: 0.3s;
+	font-size: 1.2em;
+	border: 1px solid #9796bb;
+	font-family: 'EliceDigitalBaeum_Bold';
+}
+.get-news-container .form-box .title-box .input-text:focus {
+	outline:3px solid #9796bb;
+	transition-duration: 0.3s;
+}
+.get-news-container .form-box .title-box p{
+	font-size: 1.5em;
+}
+/* textarea태그: 컨텐트 작성*/
+.get-news-container .form-box .content-box{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.get-news-container .form-box .content-box .input-textarea {
+	width: 50%;
+	height: 450px;
+	border-radius: 3px;
+	transition-duration: 0.3s;
+	font-family: 'EliceDigitalBaeum_Bold';
+	border: 1px solid #9796bb;
+	font-size: 1.2em;
+}
+.get-news-container .form-box .content-box .input-textarea:focus {
+	outline:3px solid #9796bb;
+	transition-duration: 0.3s;
+}
+.get-news-container .form-box .content-box p{
+	font-size: 1.5em;
+}
+/* 버튼 */
+.btn-container {
+	width: 50%;
+	/* height: 30px; */
+	display: flex;
+	justify-content: flex-end;
+}
+.btn-container .btn {
+	transition-duration: 0.2s;
+	font-size: 1.3em;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	border: none;
+}
+.btn-container .btn:hover {
+	cursor: pointer;
+	color: rgb(131, 161, 139);
+}
+
+/* post-news */
+.post-news-container {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 10vh;
+	width: 100%;
+	margin-bottom: 10vh;
+	font-family: 'EliceDigitalBaeum_Bold';
+}
+.post-news-container .box{
+	width: 80%;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.result-box{
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+.news-result {
+	margin-bottom: 50px;
+}
+
+
+
+/* 공용 css */
+.header {
+	position: fixed;
+  top: 0;
+  width: 80%;
+  display: flex;
+	flex-flow: column;
+  align-items: center;
+	background-color: white;
+  /* justify-content: space-around; */
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: saturate(180%) blur(3px);
+}
+
+.header-box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+	height: 7vh;
+}
+.header-box .a-btn {
+  margin-left: auto;
+	font-size: 1.3em;
+	background-color: rgb(255, 255, 255);
+	color:black;
+	border-radius: 10px;
+	text-decoration: none;
+  margin-bottom: 10vh;
+}
+.header-box .img-box {
+  margin-right: auto;
+}
+.header-box img:hover {
+  cursor: pointer;
+}
+
+.line{
+	border:none;
+	width: 100%;
+	height: 1px;
+	background-color: #9796bb;
+}
+.loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #3498db;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+} 
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); } 
+} 
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.h1-tag{
+	margin-bottom: 0px;
+}

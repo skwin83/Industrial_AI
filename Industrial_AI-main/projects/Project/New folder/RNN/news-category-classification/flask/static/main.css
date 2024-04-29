@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'EliceDigitalBaeum_Bold';
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.main-container {
+	font-family: 'EliceDigitalBaeum_Bold';
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin-top: 10vh;
+}
+
+.main-container > div {
+	margin-bottom: 5em;
+}
+
+.atag {
+	text-decoration : none;
+	font-size: 1.3em;
+	transition-duration: 0.3s;
+	color: rgb(6, 7, 7);
+}
+
+.atag:hover {
+	font-size: 1.5em;
+	color: rgb(28, 81, 83);
+}
+
+.header {
+	position: fixed;
+  top: 0;
+  width: 80%;
+  display: flex;
+	flex-flow: column;
+  align-items: center;
+	background-color: white;
+  /* justify-content: space-around; */
+	background: rgba(255,255,255,0.1);
+	backdrop-filter: saturate(180%) blur(3px);
+}
+
+.header-box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+	height: 7vh;
+}
+.header-box .a-btn {
+  margin-left: auto;
+	font-size: 1.3em;
+	background-color: rgb(255, 255, 255);
+	color:black;
+	border-radius: 10px;
+	text-decoration: none;
+  margin-bottom: 10vh;
+}
+.header-box .img-box {
+  margin-right: auto;
+}
+.header-box img:hover {
+  cursor: pointer;
+}
+
+.line{
+	border:none;
+	width: 90vw;
+	height: 1px;
+	background-color: #9796bb;
+}

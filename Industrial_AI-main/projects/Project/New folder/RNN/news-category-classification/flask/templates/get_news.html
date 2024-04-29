@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{ url_for('static', filename='news.css') }}" rel="stylesheet">
+	<title>뉴스 데이터 입력</title>
+</head>
+<body>
+	<div class="get-news-container">
+		<div class="header">
+			<div class="header-box">
+				<div class="img-box">
+					<a class="a-btn" href="{{ url_for('main') }}">
+						<img id="img" src="{{ url_for('static', filename='image/danawa.jpg') }}" width="200px" alt="">
+					</a>
+				</div>
+				<div>
+					<a class="a-btn" href="{{ url_for('main') }}">메인으로</a>
+				</div>
+			</div>
+			<div class="line"></div>
+		</div>
+		<h1 class="h1-tag">뉴스 카테고리 분류 서비스</h1>
+		<h4>아래를 모두 작성해 주세요</h4>
+		<form action="{{ url_for('post_news') }}" class="form-box" method="POST" id="data">
+			<div class="btn-container">
+				<div class="btn" id="submit">분류하기</div>
+			</div>
+			<div class="title-box">
+				<p>뉴스기사 제목을 입력해 주세요.</p>
+				<input type="text" name="title" id="title" class="input-text" placeholder="Title">
+			</div>
+			<div class="content-box">
+				<p>뉴스 내용을 입력해 주세요</p>
+				<textarea name="content" id="content" class="input-textarea" placeholder="Content"></textarea>
+			</div>
+			
+		</form>
+	</div>
+	<div class="loader" style="display: none;"> 
+	</div> 
+
+	<script>
+		let submit = document.getElementById('submit')
+    submit.onclick = function (){
+			let title = document.getElementById('title').value
+			let content = document.getElementById('content').value
+			if (title == '') {
+				alert('제목을 입력하세요')
+			} else if (content==''){
+				alert('내용을 입력해주세요')
+			} else {
+				window.scrollTo(0,0)
+				const loader = document.querySelector('.loader')
+				const container = document.querySelector('.get-news-container')
+				container.style.display = "none"
+				loader.style.display = "block"
+				document.getElementById('data').submit();
+			}
+    }
+
+	</script>
+</body>
+</html>

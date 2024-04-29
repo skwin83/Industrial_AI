@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  flask:
+    image: wkfwktka/dl_project:0.0.4
+    build: flask/
+    ports:
+      - '15000:15000'
+    volumes:
+    - ./flask:/src/app

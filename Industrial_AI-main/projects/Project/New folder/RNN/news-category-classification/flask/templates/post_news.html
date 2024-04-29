@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="{{ url_for('static', filename='news.css') }}" rel="stylesheet">
+	<title>뉴스 카테고리 분류</title>
+</head>
+<body>
+	<div class="post-news-container"> 
+		<div class="header">
+			<div class="header-box">
+				<div class="img-box">
+					<a class="a-btn" href="{{ url_for('main') }}">
+						<img id="img" src="{{ url_for('static', filename='image/danawa.jpg') }}" width="200px" alt="">
+					</a>
+				</div>
+				<div>
+					<a class="a-btn" href="{{ url_for('main') }}">메인으로</a>
+				</div>
+			</div>
+			<div class="line"></div>
+		</div>
+		
+		<div class="box">
+			<h1>뉴스 분석 결과</h1>
+			<div class="result-box">
+				<div class="line"></div>
+				<h2>뉴스 제목과 내용을 종합 분석한 결과</h2>
+				<h3 class="news-result">{{ train_percentage }}% 확률로 {{ train_category }}(으)로 예상됩니다.</h3>
+				<hr>
+			</div>
+		</div>
+	<div>
+</body>
+</html>

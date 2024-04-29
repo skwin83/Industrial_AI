@@ -1,0 +1,6 @@
+Gymnasium
+opencv-python
+matplotlib
+pygame
+torch
+wandb

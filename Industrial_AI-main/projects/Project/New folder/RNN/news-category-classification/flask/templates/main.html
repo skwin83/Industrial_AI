@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link href="{{ url_for('static', filename='main.css') }}" rel="stylesheet">
+	<title>메인페이지</title>
+</head>
+<body>
+	<div class="main-container">
+		<div class="header">
+			<div class="header-box">
+				<div class="img-box">
+					<a class="a-btn" href="{{ url_for('main') }}">
+						<img id="img" src="{{ url_for('static', filename='image/danawa.jpg') }}" width="200px" alt="">
+					</a>
+				</div>
+				<div>
+					<a class="a-btn" href="{{ url_for('main') }}">메인으로</a>
+				</div>
+			</div>
+			<div class="line"></div>
+		</div>
+		<div>
+			<h1>다나와 뉴스 카테고리 분류 서비스</h1>
+			<hr>
+		</div>
+		<div>
+			<a class="atag" href="{{ url_for('get_news') }}">뉴스 카테고리 분류하러 가기</a>
+		</div>
+	</div>
+</body>
+</html>
